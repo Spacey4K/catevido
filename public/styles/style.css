@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body {
+	color: #fff;
+	background-color: #222;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	margin: auto;
+	max-width: 80vw;
+}
+
+.btns {
+	display: flex;
+	gap: 10px;
+}
+
+.btn {
+	font-size: 1em;
+	cursor: pointer;
+	padding: 10px;
+	border-radius: 10px;
+	transition: .3s;
+	border: none;
+	color: #fff;
+	background-color: cornflowerblue;
+}
+
+.btn:hover {
+	opacity: .5;
+}
+
+.title {
+	color: #ddd;
+	text-align: center;
+	margin-bottom: 10px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

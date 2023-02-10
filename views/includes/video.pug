@@ -1,0 +1,5 @@
+mixin video(v)
+  if v.type == 'video'
+    video.content(src=v.url, controls) 
+  else if v.type == 'image'
+    img.content(src=v.url)

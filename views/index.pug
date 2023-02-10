@@ -1,0 +1,18 @@
+include includes/video.pug
+
+doctype html
+html
+  head
+    include includes/head.pug
+    title CateVido.com
+    meta(name="description", content="Funny Cate Vidos! :3")
+    link(rel="stylesheet", href="/styles/media.css")
+
+  body
+    include includes/nav.pug
+
+    main.container#media
+      each v in videos
+        a.post(href=`/v/${v.id}`)
+          p.title= v.title
+          +video(v)

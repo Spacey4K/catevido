@@ -1,0 +1,20 @@
+include includes/video.pug
+
+doctype html
+html
+  head
+    include includes/head.pug
+    link(rel="stylesheet", href="/styles/view.css")
+    script(src="/scripts/buttons.js", defer) 
+    meta(name="description", content=video.title)
+    //- meta(property="og:video" content=video.url)
+
+  body
+    include includes/nav.pug
+
+    main.container#view
+      h1.title= video.title
+      +video(video)
+      .btns
+        a.btn#save(href=video.url, download) Download
+        button.btn#copy Copy link

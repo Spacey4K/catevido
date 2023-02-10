@@ -1,0 +1,23 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 10px;
+	background-color: #333;
+	margin-bottom: 1rem;
+}
+
+.header>a {
+	color: #fff;
+	font-size: 2rem;
+	letter-spacing: 3px;
+}
+
+#rand {
+	background-color: #e4694b;
+}
+
+#upload {
+	background-color: #078b0e;
+}
