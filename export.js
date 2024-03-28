@@ -22,7 +22,7 @@ input.forEach((d, i) => {
 		output.push({
 			id: crypto.randomUUID().substring(0, 3),
 			url: emb.url,
-			type: emb.type,
+			type: emb.type == 'video' ? emb.type : 'image',
 			title: d.id,
 		});
 	}
