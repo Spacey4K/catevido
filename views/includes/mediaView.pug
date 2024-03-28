@@ -1,0 +1,5 @@
+mixin mediaView(media)
+  if media.type == 'video'
+    video.content(src=media.url, controls) 
+  else if media.type == 'image'
+    img.content(src=media.url)

@@ -1,20 +1,27 @@
-include includes/video.pug
+include includes/mediaView.pug
 
 doctype html
 html
-  head
-    include includes/head.pug
-    link(rel="stylesheet", href="/styles/view.css")
-    script(src="/scripts/buttons.js", defer) 
-    meta(name="description", content=video.title)
-    //- meta(property="og:video" content=video.url)
+	head
+		include includes/head.pug
+		link(rel="stylesheet", href="/styles/view.css")
+		script(src="/scripts/buttons.js", defer) 
 
-  body
-    include includes/nav.pug
+		meta(name="og:title", content=media.title)
+		meta(name="og:site_name", content="CateVido")
+		meta(property="og:url", content=media.url)
+		meta(property="og:type", content=media.type)
+		meta(property=`og:${media.type}:url`, content=media.url)
 
-    main.container#view
-      h1.title= video.title
-      +video(video)
-      .btns
-        a.btn#save(href=video.url, download) Download
-        button.btn#copy Copy link
+		if media.type == "image"
+			meta(property="twitter:card", content="summary_large_image")
+
+	body
+		include includes/nav.pug
+
+		main.container#view
+			h1.title=media.title
+			+mediaView(media)
+			.btns
+				a.btn#save(href=media.url, download) Download
+				button.btn#copy Copy link

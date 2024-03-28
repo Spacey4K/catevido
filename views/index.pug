@@ -1,4 +1,4 @@
-include includes/video.pug
+include includes/mediaView.pug
 
 doctype html
 html
@@ -12,7 +12,7 @@ html
     include includes/nav.pug
 
     main.container#media
-      each v in videos
-        a.post(href=`/v/${v.id}`)
-          p.title= v.title
-          +video(v)
+      each m in media
+        a.post(href=`/v/${m.id}`)
+          p.title= m.title
+          +mediaView(m)

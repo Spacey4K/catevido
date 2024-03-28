@@ -1,10 +1,2 @@
 # CateVido
-
-## Config
-config.json
-```json
-{
-	"PORT": 3000,
-	"DB": "db.json"
-}
-```
+Website gallery grid website I made for fun.
