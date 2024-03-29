@@ -21,11 +21,6 @@ app.get('/random', (req, res) => {
 });
 
 app.get('/v/:id', (req, res) => {
-	if (req.query.size) {
-		const ip = req.socket.remoteAddress;
-		console.log(ip);
-	}
-
 	const { id } = req.params;
 	const media = getMedia().find(m => m.id == id);
 	res.render('view', { media });
